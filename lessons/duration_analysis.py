@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # Dataset load
 df = pd.read_csv("data/netflix_titles.csv", encoding="latin1")
 
-# 1. Movies এর Duration distribution
+# 1. Movies  Duration distribution
 movies = df[df['type'] == "Movie"]
 movies['duration_num'] = movies['duration'].str.replace(" min","").astype(float)
 
@@ -16,7 +16,7 @@ plt.xlabel("Duration (minutes)")
 plt.ylabel("Count")
 plt.show()
 
-# 2. TV Shows এর Seasons distribution
+# 2. TV Shows  Seasons distribution
 tv_shows = df[df['type'] == "TV Show"]
 tv_shows['seasons_num'] = tv_shows['duration'].str.replace(" Season","").str.replace("s","").astype(int)
 
@@ -38,7 +38,7 @@ plt.ylabel("Country")
 plt.show()
 
 
-# শুধু movies filter করি
+#  movies filter 
 movies = df[df['type'] == 'Movie'].copy()
 
 # duration থেকে numeric value নিলাম
